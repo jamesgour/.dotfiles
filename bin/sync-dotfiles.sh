@@ -37,4 +37,4 @@ if [[ ! -z $unmerged_files ]]; then
 else
    # Run stow to ensure all new dotfiles are linked
    stow .
-fi/
+fi
