@@ -52,17 +52,19 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
 
+	-- Bufferline
+	use("akinsho/bufferline.nvim")
+
 	-- Lualine
 	use("nvim-lualine/lualine.nvim")
 
-	use("akinsho/bufferline.nvim")
-	use("moll/vim-bbye")
-	use("akinsho/toggleterm.nvim")
-	use("ahmedkhalf/project.nvim")
-	use("lewis6991/impatient.nvim")
-	use("lukas-reineke/indent-blankline.nvim")
-	use("goolord/alpha-nvim")
-	use("folke/which-key.nvim")
+	-- use("moll/vim-bbye")
+	-- use("akinsho/toggleterm.nvim")
+	-- use("ahmedkhalf/project.nvim")
+	-- use("lewis6991/impatient.nvim")
+	-- use("lukas-reineke/indent-blankline.nvim")
+	-- use("goolord/alpha-nvim")
+	-- use("folke/which-key.nvim")
 
 	-- Colorschemes - change using :colorscheme <theme>
 	use("morhetz/gruvbox") -- Gruvbox!
