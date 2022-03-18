@@ -31,7 +31,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
+keymap("n", "<leader>l", ":NvimTreeRefresh<CR>", opts)
 
 -- Netrw File Explorer - Replaced by NvimTree
 --keymap("n", "<leader>e", ":Lex 30<CR>", opts)
@@ -49,6 +49,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Move text up and down
 -- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 -- keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+
+-- Run Current Python File
+keymap("n", "<leader>r", ":!python3 %<CR>", opts)
 
 ---------- Insert Mode ----------
 -- Leave insert mode with "jk" instead of ESC
