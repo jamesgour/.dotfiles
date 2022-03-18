@@ -81,6 +81,7 @@ plugins=(
   git 
   zsh-syntax-highlighting 
   zsh-autosuggestions 
+  autojump
   sudo 
   web-search 
   copypath 
@@ -100,14 +101,14 @@ fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# you may need to manually set your language environment
+# export lang=en_us.utf-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+# preferred editor for local and remote sessions
+# if [[ -n $ssh_connection ]]; then
+#   export editor='vim'
 # else
-#   export EDITOR='mvim'
+#   export editor='mvim'
 # fi
 
 # Compilation flags
@@ -121,6 +122,7 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 source ~/.zsh_profile
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -128,3 +130,7 @@ source ~/.zsh_profile
 
 # Fzf file
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Add to PATH here
+export PATH=/home/jamesgou/.cargo/bin:$PATH 
+export PATH=/home/jamesgou/.local/bin:$PATH

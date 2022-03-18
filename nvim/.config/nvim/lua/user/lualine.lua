@@ -1,3 +1,5 @@
+-- Lualine --
+
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
 	return
@@ -21,7 +23,7 @@ local diff = {
 	"diff",
 	colored = false,
 	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-  cond = hide_in_width
+	cond = hide_in_width,
 }
 
 local mode = {

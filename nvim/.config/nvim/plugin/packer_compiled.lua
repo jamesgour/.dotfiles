@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  gruvbox = {
+    loaded = true,
+    path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
+  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/impatient.nvim",
@@ -219,6 +224,16 @@ _G.packer_plugins = {
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  ripgrep = {
+    loaded = true,
+    path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/ripgrep",
+    url = "https://github.com/BurntSushi/ripgrep"
+  },
+  ["telescope-fzy-native.nvim"] = {
+    loaded = true,
+    path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzy-native.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -228,6 +243,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-bbye"] = {
     loaded = true,
