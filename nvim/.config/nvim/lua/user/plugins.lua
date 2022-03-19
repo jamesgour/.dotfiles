@@ -68,6 +68,7 @@ return packer.startup(function(use)
 
 	-- Colorschemes - change using :colorscheme <theme>
 	use("morhetz/gruvbox") -- Gruvbox!
+	use("luisiacc/gruvbox-baby") -- Treesitter support
 	use("lunarvim/darkplus.nvim") -- VSCode Dark+
 	use("folke/tokyonight.nvim") -- Tokyo Night
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out

@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  ["gruvbox-baby"] = {
+    loaded = true,
+    path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
+    url = "https://github.com/luisiacc/gruvbox-baby"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/lualine.nvim",
