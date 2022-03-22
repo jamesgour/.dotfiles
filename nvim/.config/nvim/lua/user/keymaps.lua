@@ -46,9 +46,22 @@ keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- Close buffer
+keymap("n", "<leader>x", ":bp|bd #<CR>", opts)
+
 -- Move text up and down
 -- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 -- keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+
+-- Telescope --
+keymap("n", "<leader>lg", ":Telescope live_grep hidden=true<CR>", opts)
+keymap("n", "<leader>f", ":Telescope find_files<CR>", opts)
+-- TODO: figure out how to find hidden files & ignore node_modules - wasn't working with plugin due to bug
+--keymap("n", "<leader>ff", ":lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files hidden=true<CR>", opts)
+
+-- Easy saving using Ctrl + s
+keymap("n", "<C-s>", ":w<CR>", opts)
 
 -- Run Current Python File
 keymap("n", "<leader>r", ":!python3 %<CR>", opts)
@@ -57,12 +70,8 @@ keymap("n", "<leader>r", ":!python3 %<CR>", opts)
 -- Leave insert mode with "jk" instead of ESC
 keymap("i", "jk", "<ESC>", opts)
 
--- Telescope --
-keymap("n", "<leader>lg", ":Telescope live_grep hidden=true<CR>", opts)
-keymap("n", "<leader>f", ":Telescope find_files<CR>", opts)
--- TODO: figure out how to find hidden files & ignore node_modules - wasn't working with plugin due to bug
---keymap("n", "<leader>ff", ":lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>", opts)
-keymap("n", "<leader>ff", ":Telescope find_files hidden=true<CR>", opts)
+-- Shift + Tab to backspace
+keymap("i", "<S-Tab>", "<BS>", opts)
 
 ---------- Visual Mode ----------
 -- Stay in indent mode
