@@ -58,7 +58,7 @@ keymap("n", "<leader>r", ":!python3 %<CR>", opts)
 keymap("i", "jk", "<ESC>", opts)
 
 -- Telescope --
-keymap("n", "<leader>lg", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>lg", ":Telescope live_grep hidden=true<CR>", opts)
 keymap("n", "<leader>f", ":Telescope find_files<CR>", opts)
 -- TODO: figure out how to find hidden files & ignore node_modules - wasn't working with plugin due to bug
 --keymap("n", "<leader>ff", ":lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>", opts)
