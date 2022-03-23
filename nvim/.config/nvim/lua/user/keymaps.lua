@@ -1,4 +1,4 @@
--- Vim Keybindings --
+-- Vim Keymaps --
 -- TODO: Align this with all the useful VS Code shortcuts you knew
 -- TODO: Align VS code with all of these useful shortcuts
 

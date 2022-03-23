@@ -135,3 +135,4 @@ source ~/.zsh_profile
 export PATH=/home/jamesgou/.cargo/bin:$PATH 
 export PATH=/home/jamesgou/.local/bin:$PATH
 export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+export PATH=$/usr/local/bin:$PATH

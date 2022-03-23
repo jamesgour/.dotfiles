@@ -68,9 +68,9 @@ return packer.startup(function(use)
 
 	-- Colorschemes - change using :colorscheme <theme>
 	use("morhetz/gruvbox") -- Gruvbox!
-	use("luisiacc/gruvbox-baby") -- Treesitter support
+	-- use("luisiacc/gruvbox-baby") -- Treesitter support
 	use("lunarvim/darkplus.nvim") -- VSCode Dark+
-	use("folke/tokyonight.nvim") -- Tokyo Night
+	-- use("folke/tokyonight.nvim") -- Tokyo Night
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 
 	-- Autocompletion - cmp plugins
@@ -80,9 +80,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lsp") -- lsp completions for cmp
-
-	-- Autopairs
-	use("windwp/nvim-autopairs") -- Integrates with both cmp and treesitter
+	use("hrsh7th/cmp-nvim-lua") -- lua completions
 
 	-- LSP
 	use("neovim/nvim-lspconfig") -- enable LSP
@@ -94,6 +92,9 @@ return packer.startup(function(use)
 	-- Language Snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
+	use("johnpapa/vscode-angular-snippets") -- Angular 13 Snippets
+	use("1tontech/bootstrap4-snippets") -- Bootstrap 4 Snippets
+	use("HansUXdev/B5-Snippets") -- Bootstrap 5 Snippets
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -109,6 +110,9 @@ return packer.startup(function(use)
 	-- Easy commenting
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("JoosepAlviste/nvim-ts-context-commentstring")
+
+	-- Autopairs
+	use("windwp/nvim-autopairs") -- Integrates with both cmp and treesitter
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")

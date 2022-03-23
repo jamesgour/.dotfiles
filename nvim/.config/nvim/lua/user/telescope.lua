@@ -20,7 +20,7 @@ telescope.setup({
 		-- Ingore node_modules files
 		file_ignore_patterns = { "node_modules" },
 
-		-- Vim-like Keybindings
+		-- Telescope Keymaps (Vim-like)
 		mappings = {
 			i = {
 				["<C-n>"] = actions.cycle_history_next,

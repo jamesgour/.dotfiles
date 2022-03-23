@@ -9,25 +9,26 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
-	debug = false,
+	debug = true, -- Set this for easier debugging of null-ls
 	sources = {
-    -- Formatters
-		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+		-- Formatters
+		formatting.prettierd, --.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-    
-    -- Linters
-    diagnostics.flake8
+
+		-- Linters
+		diagnostics.eslint_d,
+		diagnostics.flake8,
 	},
-  on_attach = function(client)
-        -- Automatically format on save
-        if client.resolved_capabilities.document_formatting then
-            vim.cmd([[
+	on_attach = function(client)
+		-- Automatically format on save
+		if client.resolved_capabilities.document_formatting then
+			vim.cmd([[
             augroup LspFormatting
                 autocmd! * <buffer>
                 autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
             augroup END
             ]])
-        end
-    end,
+		end
+	end,
 })

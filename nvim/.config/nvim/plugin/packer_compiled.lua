@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["B5-Snippets"] = {
+    loaded = true,
+    path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/B5-Snippets",
+    url = "https://github.com/HansUXdev/B5-Snippets"
+  },
   ["Comment.nvim"] = {
     loaded = true,
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/Comment.nvim",
@@ -83,6 +88,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ["bootstrap4-snippets"] = {
+    loaded = true,
+    path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/bootstrap4-snippets",
+    url = "https://github.com/1tontech/bootstrap4-snippets"
   },
   ["bufferline.nvim"] = {
     loaded = true,
@@ -103,6 +113,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     loaded = true,
@@ -133,11 +148,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
-  },
-  ["gruvbox-baby"] = {
-    loaded = true,
-    path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
-    url = "https://github.com/luisiacc/gruvbox-baby"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -224,10 +234,10 @@ _G.packer_plugins = {
     path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["tokyonight.nvim"] = {
+  ["vscode-angular-snippets"] = {
     loaded = true,
-    path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
+    path = "/home/jamesgou/.local/share/nvim/site/pack/packer/start/vscode-angular-snippets",
+    url = "https://github.com/johnpapa/vscode-angular-snippets"
   }
 }
 
