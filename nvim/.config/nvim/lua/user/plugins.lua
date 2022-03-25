@@ -111,8 +111,9 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
-	-- Autopairs
+	-- Autopairs / Surrounding
 	use("windwp/nvim-autopairs") -- Integrates with both cmp and treesitter
+  use("tpope/vim-surround") -- Auto-surrounding
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
