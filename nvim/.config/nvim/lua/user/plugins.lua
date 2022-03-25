@@ -58,14 +58,6 @@ return packer.startup(function(use)
 	-- Lualine
 	use("nvim-lualine/lualine.nvim")
 
-	-- use("moll/vim-bbye")
-	-- use("akinsho/toggleterm.nvim")
-	-- use("ahmedkhalf/project.nvim")
-	-- use("lewis6991/impatient.nvim")
-	-- use("lukas-reineke/indent-blankline.nvim")
-	-- use("goolord/alpha-nvim")
-	-- use("folke/which-key.nvim")
-
 	-- Colorschemes - change using :colorscheme <theme>
 	use("morhetz/gruvbox") -- Gruvbox!
 	-- use("luisiacc/gruvbox-baby") -- Treesitter support
@@ -111,12 +103,21 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
-	-- Autopairs / Surrounding
+	-- Autopairs / Surrounding / Indentation
 	use("windwp/nvim-autopairs") -- Integrates with both cmp and treesitter
-  use("tpope/vim-surround") -- Auto-surrounding
+	use("tpope/vim-surround") -- Auto-surrounding
+	use("lukas-reineke/indent-blankline.nvim") -- Cleaner indentation
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
+
+	-- Assorted
+	-- use("moll/vim-bbye") -- Helps with buffer deletion (Not needed)
+	-- use("akinsho/toggleterm.nvim") -- Toggle a floating terminal (Not needed)
+	-- use("ahmedkhalf/project.nvim") -- Some sort of project management tool
+	-- use("lewis6991/impatient.nvim") -- Speed up Neovim start time
+	-- use("goolord/alpha-nvim") -- Start screen for Neovim
+	-- use("folke/which-key.nvim") -- Leader key menu
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
