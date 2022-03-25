@@ -12,7 +12,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/jamesgou/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -136,7 +136,7 @@ source ~/.zsh_profile
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Add to PATH here
-export PATH=/home/jamesgou/.cargo/bin:$PATH 
-export PATH=/home/jamesgou/.local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH 
+export PATH=$HOME/.local/bin:$PATH
 export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 export PATH=$/usr/local/bin:$PATH

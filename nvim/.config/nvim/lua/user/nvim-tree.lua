@@ -46,7 +46,7 @@ nvim_tree.setup({
 		"dashboard",
 		"alpha",
 	},
-	auto_close = false, -- NvimTree closes with buffer
+	auto_close = true, -- NvimTree closes with buffer
 	open_on_tab = false,
 	hijack_cursor = false,
 	update_cwd = true,
