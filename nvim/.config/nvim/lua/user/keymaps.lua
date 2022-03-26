@@ -70,8 +70,15 @@ keymap("n", "<leader>r", ":!python3 %<CR>", opts)
 -- Leave insert mode with "jk" instead of ESC
 keymap("i", "jk", "<ESC>", opts)
 
+-- Jump to new line from any cursor position with "jj"
+keymap("i", "jj", "<C-o>o", opts)
+
+-- Jump to end of line from any cursor position
+keymap("i", "jl", "<C-o>$", opts)
+
 -- Shift + Tab to backspace
 keymap("i", "<S-Tab>", "<BS>", opts)
+
 
 ---------- Visual Mode ----------
 -- Stay in indent mode

@@ -14,7 +14,7 @@ require("user.gitsigns")
 require("user.nvim-tree")
 require("user.bufferline")
 require("user.lualine")
-require("user.indentline")
+-- require("user.indentline")
 
 -- require "user.toggleterm"
 -- require "user.project"
