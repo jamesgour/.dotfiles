@@ -34,6 +34,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
     Send, {Right}
   return
 
+
 #IfWinActive
 
 ; Jump to start/end of line
@@ -43,6 +44,11 @@ return
 
 ^Space::
   Send, {End}
+return
+
+; Jump to next line with cursor anywhere
+^Enter::
+  Send, {End}{Enter}
 return
 
 ; Select part of line forward/backward
