@@ -50,8 +50,8 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>x", ":bp|bd #<CR>", opts)
 
 -- Move text up and down
--- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
--- keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
+keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Telescope --
 keymap("n", "<leader>lg", ":Telescope live_grep hidden=true<CR>", opts)
@@ -69,6 +69,9 @@ keymap("n", "<leader>r", ":!python3 %<CR>", opts)
 ---------- Insert Mode ----------
 -- Leave insert mode with "jk" instead of ESC
 keymap("i", "jk", "<ESC>", opts)
+
+-- Move one space right with Ctrl+l
+keymap("i", "<C-l>", "<Right>", opts)
 
 -- Shift + Tab to backspace
 keymap("i", "<S-Tab>", "<BS>", opts)
