@@ -76,6 +76,11 @@ return
 ^0::#0 ; Power BI
 
 ; Xah Lee Workflow Challenge
-F1::F11 ; Remap F11 - Full Screen
+F1::#+Left ; Move window one monitor left
+F2::F11 ; Remap F11 - Full Screen
+F3::#+Right ; Move window one monitor right
 F4::!F4 ; Alt + F4 - Close window
-F6::!Tab ; Alt + Tab - Switch windows
+F6::!Tab ; Alt + Tab - Switch window
+
+F11::Media_Play_Pause  
+F12::Media_Next  
