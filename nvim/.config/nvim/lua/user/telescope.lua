@@ -22,6 +22,7 @@ telescope.setup({
 
 		-- Telescope Keymaps (Vim-like)
 		mappings = {
+			-- Insert Mode
 			i = {
 				["<C-n>"] = actions.cycle_history_next,
 				["<C-p>"] = actions.cycle_history_prev,
@@ -50,9 +51,10 @@ telescope.setup({
 				["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
 				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 				["<C-l>"] = actions.complete_tag,
-				["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+				["<C-_>"] = actions.which_key, -- Show all insert mode shortcuts
 			},
 
+			-- Normal Mode
 			n = {
 				["<esc>"] = actions.close,
 				["<CR>"] = actions.select_default,
@@ -82,7 +84,7 @@ telescope.setup({
 				["<PageUp>"] = actions.results_scrolling_up,
 				["<PageDown>"] = actions.results_scrolling_down,
 
-				["?"] = actions.which_key,
+				["?"] = actions.which_key, -- Show all normal mode shortcuts
 			},
 		},
 	},

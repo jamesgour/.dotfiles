@@ -23,15 +23,15 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 ---------- Normal Mode ----------
--- Better window navigation
+-- Vim-like window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>l", ":NvimTreeRefresh<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- Open/close NvimTree
+keymap("n", "<leader>l", ":NvimTreeRefresh<CR>", opts) -- Refresh files in NVimTree
 
 -- Netrw File Explorer - Replaced by NvimTree
 --keymap("n", "<leader>e", ":Lex 30<CR>", opts)
@@ -50,6 +50,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>x", ":bp|bd #<CR>", opts)
 
 -- Move text up and down
+-- TODO: Fix these!
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
