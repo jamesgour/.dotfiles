@@ -50,9 +50,8 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>x", ":bp|bd #<CR>", opts)
 
 -- Move text up and down
--- TODO: Fix these!
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-j>", ":m+<CR>", opts)
+keymap("n", "<A-k>", ":m-2<CR>", opts)
 
 -- Telescope --
 keymap("n", "<leader>lg", ":Telescope live_grep hidden=true<CR>", opts)
@@ -60,6 +59,16 @@ keymap("n", "<leader>f", ":Telescope find_files<CR>", opts)
 -- TODO: figure out how to find hidden files & ignore node_modules - wasn't working with plugin due to bug
 --keymap("n", "<leader>ff", ":lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>", opts)
 keymap("n", "<leader>ff", ":Telescope find_files hidden=true<CR>", opts)
+
+-- Harpoon
+keymap("n", "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', opts) -- Add Harpoon mark
+keymap("n", "<leader>d", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts) -- Harpoon marks menu
+keymap("n", "<leader>s", ':lua require("harpoon.cmd-ui").toggle_quick_menu()<CR>', opts) -- Harpoon commands menu
+
+keymap("n", "<C-q>", ':lua require("harpoon.ui").nav_file(1)<CR>', opts) -- Navigate to Harpoon mark 1
+keymap("n", "<C-w>", ':lua require("harpoon.ui").nav_file(2)<CR>', opts)
+keymap("n", "<C-e>", ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
+keymap("n", "<C-r>", ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
 
 -- Easy saving using Ctrl + s
 keymap("n", "<C-s>", ":w<CR>", opts)
@@ -91,7 +100,7 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 -- keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 -- keymap("v", "<A-k>", ":m .-2<CR>==", opts)
--- keymap("v", "p", '"_dP', opts)
+keymap("v", "p", '"_dP', opts)
 
 ---------- Visual Block Mode ----------
 -- Move text up and down

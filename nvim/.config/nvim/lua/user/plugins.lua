@@ -93,6 +93,9 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope-fzy-native.nvim") --Faster fuzzy finding
 	use("BurntSushi/ripgrep") -- Required for live_grep & grep_string
 
+	-- Harpoon
+	use("ThePrimeagen/harpoon") -- Quicker file switching
+
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -106,10 +109,10 @@ return packer.startup(function(use)
 	-- Autopairs / Surrounding / Indentation
 	use("windwp/nvim-autopairs") -- Integrates with both cmp and treesitter
 	use("tpope/vim-surround") -- Auto-surrounding
-	use("lukas-reineke/indent-blankline.nvim") -- Cleaner indentation
+	use("lukas-reineke/indent-blankline.nvim") -- Indentation lines
 
 	-- Git
-	use("lewis6991/gitsigns.nvim")
+	use("lewis6991/gitsigns.nvim") -- Colored lines for file changes like in VSCode
 
 	-- Assorted
 	-- use("moll/vim-bbye") -- Helps with buffer deletion (Not needed)
