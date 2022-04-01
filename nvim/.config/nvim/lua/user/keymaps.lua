@@ -59,10 +59,10 @@ keymap("n", "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', opts) --
 keymap("n", "<leader>d", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts) -- Harpoon marks menu
 keymap("n", "<leader>s", ':lua require("harpoon.cmd-ui").toggle_quick_menu()<CR>', opts) -- Harpoon commands menu
 
-keymap("n", "<C-q>", ':lua require("harpoon.ui").nav_file(1)<CR>', opts) -- Navigate to Harpoon mark 1
-keymap("n", "<C-w>", ':lua require("harpoon.ui").nav_file(2)<CR>', opts)
-keymap("n", "<C-e>", ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
-keymap("n", "<C-r>", ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
+keymap("n", "<leader>j", ':lua require("harpoon.ui").nav_file(1)<CR>', opts) -- Navigate to Harpoon mark 1
+keymap("n", "<leader>k", ':lua require("harpoon.ui").nav_file(2)<CR>', opts)
+keymap("n", "<leader>l", ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
+keymap("n", "<leader>;", ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", ":m+<CR>", opts)
@@ -101,9 +101,6 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "p", '"_dP', opts) -- Easily paste over text
 
 ---------- Visual Block Mode ----------
--- Enter visual block mode (Normally <C-v>)
-keymap("n", "<C-b>", "<C-q>", opts)
-
 -- Move text up and down
 -- keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 -- keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
