@@ -29,29 +29,23 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- Open/close NvimTree
-keymap("n", "<leader>l", ":NvimTreeRefresh<CR>", opts) -- Refresh files in NVimTree
+-- Navigate buffers
+keymap("n", "<S-l>", ":bnext<CR>", opts) -- Move to next buffer
+keymap("n", "<S-h>", ":bprevious<CR>", opts) -- Move to next buffer
+keymap("n", "<leader>x", ":bp|bd #<CR>", opts) -- Close buffer
 
--- Netrw File Explorer - Replaced by NvimTree
---keymap("n", "<leader>e", ":Lex 30<CR>", opts)
-
--- Resize with arrows
+-- Resize panes with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+-- Netrw File Explorer - Replaced by NvimTree
+--keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 
--- Close buffer
-keymap("n", "<leader>x", ":bp|bd #<CR>", opts)
-
--- Move text up and down
-keymap("n", "<A-j>", ":m+<CR>", opts)
-keymap("n", "<A-k>", ":m-2<CR>", opts)
+-- NvimTree
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- Open/close NvimTree
+keymap("n", "<leader>l", ":NvimTreeRefresh<CR>", opts) -- Refresh files in NVimTree
 
 -- Telescope --
 keymap("n", "<leader>lg", ":Telescope live_grep hidden=true<CR>", opts)
@@ -69,6 +63,10 @@ keymap("n", "<C-q>", ':lua require("harpoon.ui").nav_file(1)<CR>', opts) -- Navi
 keymap("n", "<C-w>", ':lua require("harpoon.ui").nav_file(2)<CR>', opts)
 keymap("n", "<C-e>", ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
 keymap("n", "<C-r>", ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
+
+-- Move text up and down
+keymap("n", "<A-j>", ":m+<CR>", opts)
+keymap("n", "<A-k>", ":m-2<CR>", opts)
 
 -- Easy saving using Ctrl + s
 keymap("n", "<C-s>", ":w<CR>", opts)
@@ -100,12 +98,15 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 -- keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 -- keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+keymap("v", "p", '"_dP', opts) -- Easily paste over text
 
 ---------- Visual Block Mode ----------
+-- Enter visual block mode (Normally <C-v>)
+keymap("n", "<C-b>", "<C-q>", opts)
+
 -- Move text up and down
 -- keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
--- keymap("x", "K", ":move '<-2<CR>gv-gv", opts):Telescopefind_files find_command=rg,--ignore,--hidden,--files
+-- keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 -- keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 -- keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
