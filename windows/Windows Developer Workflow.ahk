@@ -82,5 +82,5 @@ F3::#+Right ; Move window one monitor right
 F4::!F4 ; Alt + F4 - Close window
 F6::!Tab ; Alt + Tab - Switch window
 
-F11::Media_Play_Pause  
-F12::Media_Next  
+F11::Media_Next  
+F12::Media_Play_Pause  
