@@ -102,9 +102,10 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 
-	-- Easy commenting
+	-- Easy Commenting & Todos
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("JoosepAlviste/nvim-ts-context-commentstring")
+	use("folke/todo-comments.nvim") -- TODO highlighting
 
 	-- Autopairs / Surrounding / Indentation
 	use("windwp/nvim-autopairs") -- Integrates with both cmp and treesitter

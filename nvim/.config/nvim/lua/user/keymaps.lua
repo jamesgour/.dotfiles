@@ -91,9 +91,6 @@ keymap("i", "<S-Tab>", "<BS>", opts)
 --keymap("i", "jl", "<C-o>$", opts)
 
 ---------- Visual Mode ----------
--- Leave visual mode with "jk" instead of ESC
-keymap("v", "jk", "<ESC>", opts)
-
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -104,9 +101,6 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "p", '"_dP', opts) -- Easily paste over text
 
 ---------- Visual Block Mode ----------
--- Leave visual block mode with "jk" instead of ESC
-keymap("v", "jk", "<ESC>", opts)
-
 -- Move text up and down
 -- keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 -- keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
