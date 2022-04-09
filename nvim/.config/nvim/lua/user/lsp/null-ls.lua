@@ -18,7 +18,7 @@ null_ls.setup({
 
 		-- Linters
 		diagnostics.eslint_d,
-		diagnostics.flake8,
+		diagnostics.flake8.with({ extra_args = { "--max-line-length=88" } }),
 	},
 	on_attach = function(client)
 		-- Automatically format on save
