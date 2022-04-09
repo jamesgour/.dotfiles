@@ -15,6 +15,7 @@ require("user.nvim-tree")
 require("user.bufferline")
 require("user.lualine")
 require("user.todo-comments")
+require("user.autocommands")
 -- require("user.indentline")
 
 -- require "user.toggleterm"
@@ -22,4 +23,3 @@ require("user.todo-comments")
 -- require "user.impatient"
 -- require "user.alpha"
 -- require "user.whichkey"
--- require "user.autocommands"
