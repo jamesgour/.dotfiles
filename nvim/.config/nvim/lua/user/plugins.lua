@@ -116,7 +116,7 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- Colored lines for file changes like in VSCode
 
 	-- Colorizer
-	use("norcalli/nvim-colorizer.lua") -- Highlight color codes
+	use("ap/vim-css-color") -- Highlight CSS color codes
 
 	-- Assorted
 	-- use("moll/vim-bbye") -- Helps with buffer deletion (Not needed)

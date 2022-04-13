@@ -45,10 +45,11 @@ keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- Open/close NvimTree
-keymap("n", "<leader>l", ":NvimTreeRefresh<CR>", opts) -- Refresh files in NVimTree
+keymap("n", "<leader>rl", ":NvimTreeRefresh<CR>", opts) -- Refresh files in NVimTree
 
 -- Telescope --
-keymap("n", "<leader>lg", ":Telescope live_grep hidden=true<CR>", opts)
+keymap("n", "<leader>g", ":Telescope live_grep hidden=true<CR>", opts)
+keymap("n", "<leader>h", ":Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>f", ":Telescope find_files<CR>", opts)
 -- TODO: figure out how to find hidden files & ignore node_modules - wasn't working with plugin due to bug
 --keymap("n", "<leader>ff", ":lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>", opts)
@@ -68,8 +69,9 @@ keymap("n", "<leader>;", ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
 keymap("n", "<A-j>", ":m+<CR>", opts)
 keymap("n", "<A-k>", ":m-2<CR>", opts)
 
--- Easy saving using Ctrl + s
+-- Easy saving using Ctrl + s or <leader>w
 keymap("n", "<C-s>", ":w<CR>", opts)
+keymap("n", "<leader>w", ":w<CR>", opts)
 
 -- Run Current Python File
 keymap("n", "<leader>r", ":!python3 %<CR>", opts)
@@ -81,7 +83,7 @@ keymap("i", "jk", "<ESC>", opts)
 -- Move one space right with Ctrl+l
 keymap("i", "<C-l>", "<Right>", opts)
 
--- Shift + Tab to backspace
+-- Shift + Tab to backspace (if not on Kinesis Advantage)
 keymap("i", "<S-Tab>", "<BS>", opts)
 
 -- Jump to new line from any cursor position with "jj"
