@@ -115,6 +115,9 @@ return packer.startup(function(use)
 	-- Git
 	use("lewis6991/gitsigns.nvim") -- Colored lines for file changes like in VSCode
 
+	-- Colorizer
+	use("norcalli/nvim-colorizer.lua") -- Highlight color codes
+
 	-- Assorted
 	-- use("moll/vim-bbye") -- Helps with buffer deletion (Not needed)
 	-- use("akinsho/toggleterm.nvim") -- Toggle a floating terminal (Not needed)
