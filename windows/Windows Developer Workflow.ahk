@@ -76,9 +76,19 @@ return
 ^0::#0 ; Power BI
 
 ; Xah Lee Workflow Challenge
-F1::#+Left ; Move window one monitor left
+
+F1::
+  Send, {LWin Down}{Left}{LWin Up} ; Move window one monitor left 
+  ; Requires "Move Windows Based on Relative Position" in Fancy Zones
+return
+
 F2::F11 ; Remap F11 - Full Screen
-F3::#+Right ; Move window one monitor right
+
+F3::
+  Send, {LWin Down}{Right}{LWin Up} ; Move window one monitor right
+  ; Requires "Move Windows Based on Relative Position" in Fancy Zones
+return
+
 F4::!F4 ; Alt + F4 - Close window
 F6::!Tab ; Alt + Tab - Switch window
 
