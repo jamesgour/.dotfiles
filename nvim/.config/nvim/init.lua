@@ -16,6 +16,7 @@ require("user.bufferline")
 require("user.lualine")
 require("user.todo-comments")
 require("user.autocommands")
+require("user.useful-functions")
 -- require("user.indentline")
 
 -- require "user.toggleterm"

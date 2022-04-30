@@ -1,4 +1,4 @@
-vim.cmd [[
+vim.cmd([[
 
   " Trigger automatic reload when files change on disk
     autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
@@ -36,4 +36,4 @@ vim.cmd [[
   "   autocmd!
   "   autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   " augroup end
-]]
+]])
