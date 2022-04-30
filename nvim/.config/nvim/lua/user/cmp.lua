@@ -56,6 +56,11 @@ cmp.setup({
 		end,
 	},
 
+  window = {
+    -- completion = cmp.config.window.bordered(),
+    -- documentation = cmp.config.window.bordered(),
+  },
+
 	-- Cmp Keymaps
 	mapping = {
 		["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -132,9 +137,6 @@ cmp.setup({
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
 		select = false,
-	},
-	documentation = {
-		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
 	},
 	experimental = {
 		ghost_text = true,
