@@ -62,6 +62,9 @@ return
 
 
 ; ---------- KEY REMAPS ----------
+; Easier vimming
+Capslock::Esc
+
 ; Window navigation with CTRL + 1-0
 ; Make sure to move all windows to the bottom bar in the correct order
 ^1::#1 ; VPN
