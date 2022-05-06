@@ -111,6 +111,7 @@ return packer.startup(function(use)
 	-- Autopairs / Surrounding / Indentation
 	use("windwp/nvim-autopairs") -- Integrates with both cmp and treesitter
 	use("tpope/vim-surround") -- Auto-surrounding
+	use("tpope/vim-repeat") -- Use . to repeat plugin commands
 	use("lukas-reineke/indent-blankline.nvim") -- Indentation lines
 
 	-- Git
