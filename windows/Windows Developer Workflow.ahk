@@ -95,5 +95,17 @@ return
 F4::!F4 ; Alt + F4 - Close window
 F6::!Tab ; Alt + Tab - Switch window
 
+F10:: ; Hide the taskbar
+If WinExist("ahk_class Shell_TrayWnd") 
+	{
+	WinHide, ahk_class Shell_TrayWnd
+	WinHide, ahk_class Shell_SecondaryTrayWnd
+	}
+Else
+	{
+	WinShow, ahk_class Shell_TrayWnd
+	WinShow, ahk_class Shell_SecondaryTrayWnd
+	}
+
 F11::Media_Next  
 F12::Media_Play_Pause  
