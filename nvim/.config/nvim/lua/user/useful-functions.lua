@@ -5,11 +5,11 @@ vim.cmd([[
   function! CodeReview(active)
     if a:active == 1
       :colorscheme darkplus
-      :set norelativenumber
+      :bufdo set norelativenumber
 
     else
       :colorscheme gruvbox
-      :set relativenumber
+      :bufdo set relativenumber
     endif
   endfunction
 
