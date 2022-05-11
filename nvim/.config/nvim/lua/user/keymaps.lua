@@ -73,6 +73,10 @@ keymap("n", "<A-k>", ":m-2<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
 
+-- Exit buffer/vim
+keymap("n", "<leader>q", ":q!<CR>", opts)
+keymap("n", "<leader>qq", ":qa!<CR>", opts)
+
 -- Run Current Python File
 keymap("n", "<leader>r", ":!python3 %<CR>", opts)
 

@@ -75,8 +75,8 @@ Capslock::Esc
 ^6::#6 ; Windows Terminal
 ^7::#7 ; Work Browser
 ^8::#8 ; Personal Browser
-^9::#9 ; File Explorer
-^0::#0 ; Power BI
+^9::#9 ; VS Code 
+^0::#0 ; Database  
 
 ; Xah Lee Workflow Challenge
 
