@@ -44,7 +44,7 @@ keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 --keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 
 -- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- Open/close NvimTree
+keymap("n", "<leader>e", ":NvimTreeFindFile<CR>", opts) -- Open/close NvimTree
 keymap("n", "<leader>rl", ":NvimTreeRefresh<CR>", opts) -- Refresh files in NVimTree
 
 -- Telescope --
@@ -72,10 +72,6 @@ keymap("n", "<A-k>", ":m-2<CR>", opts)
 -- Easy saving using Ctrl + s or <leader>w
 keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
-
--- Exit buffer/vim
-keymap("n", "<leader>q", ":q!<CR>", opts)
-keymap("n", "<leader>qq", ":qa!<CR>", opts)
 
 -- Run Current Python File
 keymap("n", "<leader>r", ":!python3 %<CR>", opts)
