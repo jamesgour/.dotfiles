@@ -85,7 +85,8 @@ F1::
   ; Requires "Move Windows Based on Relative Position" in Fancy Zones
 return
 
-F2::F11 ; Remap F11 - Full Screen
+F2::WinMinimize, A ; Minimize active window
+; TODO: Try this out - Used to Remap F11 - Full Screen
 
 F3::
   Send, {LWin Down}{Right}{LWin Up} ; Move window one monitor right
