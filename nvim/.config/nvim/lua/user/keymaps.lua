@@ -44,8 +44,7 @@ keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 --keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 
 -- NvimTree
-keymap("n", "<leader>e", ":NvimTreeFindFile<CR>", opts) -- Open/close NvimTree to current file
-keymap("n", "<C-e>", ":NvimTreeToggle<CR>", opts) -- Open/close NvimTree
+keymap("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", opts) -- Open/close NvimTree to current file
 keymap("n", "<leader>rl", ":NvimTreeRefresh<CR>", opts) -- Refresh files in NVimTree
 
 -- Telescope --
