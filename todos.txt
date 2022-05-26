@@ -1,0 +1,37 @@
+DOTFILES & VIM TODO LIST
+
+DOTFILES
+  •
+  •
+  •
+  •
+  •
+  •
+  •
+  •
+  •
+  •
+  •
+  •
+
+
+
+VIM
+  • Map <C-/> to gcc
+  • :t. to duplicate line down - map this
+  • gv & gV
+  • Jump to previous buffer keymap
+  • Remap all keymaps to leader?
+  • Copy primeagen I Built A Thing cheatsheet program
+  • Start reading vim manual
+  •
+  •
+  •
+  •
+  •
+
+
+
+
+
+✔️

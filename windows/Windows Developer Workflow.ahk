@@ -17,6 +17,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; Use Window Spy addon app to get window information
 ; Vim-like navigation using CTRL + HJKL (Outisde of tmux)
+; TODO: FIX THE HOLD DOWN ALT H/L Issue!
 #IfWinNotActive Ubuntu 
   $^j::
     Sendplay, {Down}
@@ -96,17 +97,7 @@ return
 F4::!F4 ; Alt + F4 - Close window
 F6::!Tab ; Alt + Tab - Switch window
 
-F10:: ; Hide the taskbar
-If WinExist("ahk_class Shell_TrayWnd") 
-	{
-	WinHide, ahk_class Shell_TrayWnd
-	WinHide, ahk_class Shell_SecondaryTrayWnd
-	}
-Else
-	{
-	WinShow, ahk_class Shell_TrayWnd
-	WinShow, ahk_class Shell_SecondaryTrayWnd
-	}
+F10::^+. ; Activate google voice search
 
 F11::Media_Next  
 F12::Media_Play_Pause  
