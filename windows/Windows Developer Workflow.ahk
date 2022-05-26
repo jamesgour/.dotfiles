@@ -97,7 +97,21 @@ return
 F4::!F4 ; Alt + F4 - Close window
 F6::!Tab ; Alt + Tab - Switch window
 
-F10::^+. ; Activate google voice search
+; F10 Voice Recognition
+#IfWinActive ahk_exe OUTLOOK.EXE
+  F10::!` ; Activate Outlook dictate
+#IfWinActive
+
+#IfWinActive ahk_exe msedge.exe
+  F10::^+. ; Activate Edge google voice search
+#IfWinActive 
+
+#IfWinActive ahk_exe Explorer.EXE 
+  F10::#^s ; Activate Windows Speech Recognition
+#IfWinActive
+
+F10::#h ; Activate Windows dictate 
 
 F11::Media_Next  
 F12::Media_Play_Pause  
+
