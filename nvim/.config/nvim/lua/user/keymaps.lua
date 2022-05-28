@@ -105,6 +105,11 @@ keymap("v", ">", ">gv", opts)
 -- keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts) -- Easily paste over text
 
+-- TODO: Figure out how to copy only selection
+-- Copy to system clipboard using clip.exe
+keymap("v", "<leader>y", ":'<,'>w !clip.exe<CR><CR>", opts)
+keymap("v", "<leader>yy", ":'<,'>w !clip.exe<CR><CR>", opts)
+
 ---------- Visual Block Mode ----------
 -- Move text up and down
 -- keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
