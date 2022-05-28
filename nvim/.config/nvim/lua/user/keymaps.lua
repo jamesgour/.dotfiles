@@ -1,6 +1,4 @@
 -- Vim Keymaps --
--- TODO: Align this with all the useful VS Code shortcuts you knew
--- TODO: Align VS code with all of these useful shortcuts
 
 local opts = { noremap = true, silent = true }
 
@@ -23,6 +21,9 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 ---------- Normal Mode ----------
+-- TODO: Figure out how to Source init.lua
+-- keymap("n", "<C-s>", ":luafile %<CR>", opts)
+
 -- Vim-like window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -70,7 +71,7 @@ keymap("n", "<A-j>", ":m+<CR>", opts)
 keymap("n", "<A-k>", ":m-2<CR>", opts)
 
 -- Easy saving using Ctrl + s or <leader>w
-keymap("n", "<C-s>", ":w<CR>", opts)
+-- keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
 
 -- Run Current Python File
