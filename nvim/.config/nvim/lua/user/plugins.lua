@@ -85,9 +85,9 @@ return packer.startup(function(use)
 	-- Language Snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
-	use("johnpapa/vscode-angular-snippets") -- Angular 13 Snippets
+	use("johnpapa/vscode-angular-snippets") -- Angular 13 Snippets using "a-"
 	use("1tontech/bootstrap4-snippets") -- Bootstrap 4 Snippets
-	use("HansUXdev/B5-Snippets") -- Bootstrap 5 Snippets
+	use("HansUXdev/B5-Snippets") -- Bootstrap 5 Snippets using "b5-"
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
