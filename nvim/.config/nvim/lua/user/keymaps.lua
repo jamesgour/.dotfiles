@@ -80,6 +80,9 @@ keymap("n", "<leader>r", ":!python3 %<CR>", opts)
 -- Enable Code Review
 keymap("n", "<leader>cr", ":call CodeReview(1)<CR>", opts)
 
+-- Primeagen cht.sh tool https://www.youtube.com/watch?v=hJzqEAf2U4I
+keymap("n", "<leader>i", ":terminal ~/.dotfiles/bin/tmux-cht.sh<CR>", opts)
+
 ---------- Insert Mode ----------
 -- Leave insert mode with "jk" instead of ESC
 keymap("i", "jk", "<ESC>", opts)
