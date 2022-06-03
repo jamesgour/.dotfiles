@@ -18,9 +18,8 @@ require("user.todo-comments")
 require("user.autocommands")
 require("user.useful-functions")
 -- require("user.indentline")
-
+-- require("user.impatient")
 -- require "user.toggleterm"
 -- require "user.project"
--- require "user.impatient"
 -- require "user.alpha"
 -- require "user.whichkey"
