@@ -5,82 +5,127 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; Reference: https://www.autohotkey.com/docs/Tutorial.html
 
-; ---------- Quick Notes ----------
+; -------------------- Quick Notes -------------------- 
 ; ^ - CTRL
 ; ! - ALT
 ; + - SHIFT
 ; # - WIN
 ; & - Combine two keys
 
-
-; ---------- KEY MAPS ----------
-
 ; Use Window Spy addon app to get window information
-; Vim-like navigation using CTRL + HJKL (Outisde of tmux)
-; TODO: FIX THE HOLD DOWN ALT H/L Issue!
+
+
+; -------------------- KEY MAPS------------------------ 
+
+; -----------------------------------------------------
+; Vim-like navigation using CTRL + HJKL (Outisde of Ubuntu)
 #IfWinNotActive Ubuntu 
-  $^j::
+  $!j::
     Sendplay, {Down}
   return
 
-  $^k::
+  $!k::
     Sendplay, {Up}
   return
 
-  $^h::
+  $!h::
     Send, {Left}
   return
 
-  $^l::
+  $!l::
     Send, {Right}
   return
 
 
 #IfWinActive
 
-; Jump to start/end of line
-^Backspace::
+; Jump to start of line
+!Backspace::
   Send, {Home}
 return
 
-^Space::
+; Jump to end of line
+!Space::
   Send, {End}
 return
 
-; Jump to next line with cursor anywhere
-^Enter::
-  Send, {End}{Enter}
-return
-
-; Select part of line forward/backward
-$^+l::
+; Highlight right character-wise 
+$!+l::
   Send, {Shift Down}{Right}
 return
 
-$^+h::
+; Highlight right word-wise 
+^$!+l::
+  Send, {Shift Down}{Ctrl Down}{Right}
+return
+
+; Highlight left character-wise 
+$!+h::
   Send, {Shift Down}{Left}
 return
 
+; Highlight left word-wise 
+^$!+h::
+  Send, {Shift Down}{Ctrl Down}{Left}
+return
 
-; ---------- KEY REMAPS ----------
+; Jump to next line with cursor anywhere
+!Enter::
+  Send, {End}{Enter}
+return
+
+; -----------------------------------------------------
+
 ; Easier vimming
 Capslock::Esc
 
+; -----------------------------------------------------
 ; Window navigation with CTRL + 1-0
 ; Make sure to move all windows to the bottom bar in the correct order
-^1::#1 ; VPN
-^2::#2 ; Screen Clipper
-^3::#3 ; MS Teams
-^4::#4 ; Outlook
-^5::#5 ; OneNote
-^6::#6 ; Windows Terminal
-^7::#7 ; Work Browser
-^8::#8 ; Personal Browser
-^9::#9 ; VS Code 
-^0::#0 ; Database  
+!1:: ; VPN
+  Send, #1
+return 
+
+!2:: ; Screen Clipper
+  Send, #2
+return 
+
+!3:: ; MS Teams
+  Send, #3
+return 
+
+!4:: ; Outlook
+  Send, #4
+return 
+
+!5:: ; OneNote
+  Send, #5
+return 
+
+!6:: ; Windows Terminal
+  Send, #6
+return 
+
+!7:: ; Work Browser
+  Send, #7
+return 
+
+!8:: ; Personal Browser
+  Send, #8
+return 
+
+!9:: ; VS Code 
+  Send, #9
+return 
+
+!0:: ; Database  
+  Send, #0
+return 
+
+
+; -----------------------------------------------------
 
 ; Xah Lee Workflow Challenge
-
 F1::
   Send, {LWin Down}{Left}{LWin Up} ; Move window one monitor left 
   ; Requires "Move Windows Based on Relative Position" in Fancy Zones
@@ -96,6 +141,8 @@ return
 
 F4::!F4 ; Alt + F4 - Close window
 F6::!Tab ; Alt + Tab - Switch window
+
+; TODO: Map F7-F9
 
 ; F10 Voice Recognition
 #IfWinActive ahk_exe OUTLOOK.EXE
@@ -114,4 +161,6 @@ F10::#h ; Activate Windows dictate
 
 F11::Media_Next  
 F12::Media_Play_Pause  
+
+; -----------------------------------------------------
 
