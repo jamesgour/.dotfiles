@@ -49,13 +49,19 @@ return
   Send, {End}
 return
 
+; TODO: Fix these!
+; Jump right/left word wise
+;$^!l::
+;  Sendplay, {Ctrl Down}{Right} 
+;return
+
 ; Highlight right character-wise 
 $!+l::
   Send, {Shift Down}{Right}
 return
 
 ; Highlight right word-wise 
-^$!+l::
+$^!+l::
   Send, {Shift Down}{Ctrl Down}{Right}
 return
 
@@ -65,8 +71,18 @@ $!+h::
 return
 
 ; Highlight left word-wise 
-^$!+h::
+$^!+h::
   Send, {Shift Down}{Ctrl Down}{Left}
+return
+
+; Highlight down character-wise 
+$!+j::
+  Send, {Shift Down}{Down}
+return
+
+; Highlight up character-wise 
+$!+k::
+  Send, {Shift Down}{Up}
 return
 
 ; Jump to next line with cursor anywhere
