@@ -30,10 +30,12 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- Navigate buffers
+-- Navigate buffers & re-order
 keymap("n", "<S-l>", ":bnext<CR>", opts) -- Move to next buffer
 keymap("n", "<S-h>", ":bprevious<CR>", opts) -- Move to next buffer
 keymap("n", "<leader>x", ":bp|bd #<CR>", opts) -- Close buffer
+keymap("n", "<S-Right>", ":BufferLineMoveNext<CR>", opts) -- Move buffer right
+keymap("n", "<S-Left>", ":BufferLineMovePrev<CR>", opts) -- Move buffer left
 
 -- Resize panes with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
