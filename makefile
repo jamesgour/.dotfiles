@@ -2,7 +2,7 @@
 # $ make
 
 # To delete all dotfile-related symlinks from the machine:
-# make delete
+# $ make delete
 
 # These calls should always happen from your .dotfiles directory
 
