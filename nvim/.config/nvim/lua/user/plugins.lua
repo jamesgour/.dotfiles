@@ -121,7 +121,7 @@ return packer.startup(function(use)
   use("ap/vim-css-color") -- Highlight CSS color codes
 
   -- Easy neovim sessions
-  -- use("tpope/vim-obsession")
+  use("tpope/vim-obsession")
 
   -- Assorted
   -- use("moll/vim-bbye") -- Helps with buffer deletion (Not needed)

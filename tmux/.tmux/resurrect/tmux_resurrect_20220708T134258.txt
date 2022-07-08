@@ -1,0 +1,7 @@
+pane	basic-setup	2	0	:-	0	jamesgou-MOBL4	:/mnt/c/software-engineering/HVWT/hv_web	1	nvim	:nvim -S
+pane	basic-setup	3	1	:*	0	jamesgou-MOBL4	:/home/jamesgou/.dotfiles	1	nvim	:nvim -S
+pane	basic-setup	4	0	:	0	jamesgou-MOBL4	:/home/jamesgou/u-software-engineering/LeetCode-Grind	1	nvim	:nvim -S
+window	basic-setup	2	:nvim	0	:-	d0de,233x49,0,0,1	:
+window	basic-setup	3	:nvim	1	:*	d0df,233x49,0,0,2	:
+window	basic-setup	4	:nvim	0	:	d0e0,233x49,0,0,3	:
+state	basic-setup	
