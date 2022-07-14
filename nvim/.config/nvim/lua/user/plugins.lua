@@ -60,6 +60,7 @@ return packer.startup(function(use)
 
   -- Colorschemes - change using :colorscheme <theme>
   use("morhetz/gruvbox") -- Gruvbox!
+  -- use("marko-cerovac/material.nvim") -- Material Treesitter
   -- use("sainnhe/gruvbox-material") -- Gruvbox for Treesitter
   -- use("luisiacc/gruvbox-baby") -- Treesitter support
   use("lunarvim/darkplus.nvim") -- VSCode Dark+

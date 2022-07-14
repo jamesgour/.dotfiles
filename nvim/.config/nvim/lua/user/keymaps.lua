@@ -7,7 +7,7 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
---Remap space as leader key
+-- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -43,9 +43,6 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
--- Netrw File Explorer - Replaced by NvimTree
---keymap("n", "<leader>e", ":Lex 30<CR>", opts)
-
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", opts) -- Open/close NvimTree to current file
 keymap("n", "<leader>rl", ":NvimTreeRefresh<CR>", opts) -- Refresh files in NVimTree
@@ -72,12 +69,14 @@ keymap("n", "<leader>;", ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
 keymap("n", "<A-j>", ":m+<CR>", opts)
 keymap("n", "<A-k>", ":m-2<CR>", opts)
 
--- Easy saving using Ctrl + s or <leader>w
--- keymap("n", "<C-s>", ":w<CR>", opts)
+-- Easy saving
 keymap("n", "<leader>w", ":w<CR>", opts)
 
 -- Run Current Python File
 keymap("n", "<leader>r", ":!python3 %<CR>", opts)
+
+-- Faster :noh
+keymap("n", "<leader>n", ":noh<CR>", opts)
 
 -- Enable Code Review
 keymap("n", "<leader>cr", ":call CodeReview(1)<CR>", opts)
@@ -85,18 +84,12 @@ keymap("n", "<leader>cr", ":call CodeReview(1)<CR>", opts)
 -- Primeagen cht.sh tool https://www.youtube.com/watch?v=hJzqEAf2U4I
 keymap("n", "<leader>i", ":terminal ~/.dotfiles/bin/tmux-cht.sh<CR>", opts)
 
--- Faster :noh
-keymap("n", "<leader>n", ":noh<CR>", opts)
-
 ---------- Insert Mode ----------
 -- Leave insert mode with "jk" instead of ESC
 keymap("i", "jk", "<ESC>", opts)
 
 -- Move one space right with Ctrl+l
 keymap("i", "<C-l>", "<Right>", opts)
-
--- Shift + Tab to backspace (if not on Kinesis Advantage)
-keymap("i", "<S-Tab>", "<BS>", opts)
 
 -- Jump to new line from any cursor position with "jj"
 --keymap("i", "jj", "<C-o>o", opts)
@@ -112,12 +105,9 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 -- keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 -- keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts) -- Easily paste over text
 
--- TODO: Figure out how to copy only selection
--- Copy to system clipboard using clip.exe
-keymap("v", "<leader>y", ":'<,'>w !clip.exe<CR><CR>", opts)
-keymap("v", "<leader>yy", ":'<,'>w !clip.exe<CR><CR>", opts)
+-- Easily paste over text
+keymap("v", "p", '"_dP', opts)
 
 ---------- Visual Block Mode ----------
 -- Move text up and down
