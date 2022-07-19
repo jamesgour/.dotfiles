@@ -19,76 +19,76 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; -----------------------------------------------------
 ; Vim-like navigation using CTRL + HJKL (Outisde of Ubuntu)
-#IfWinNotActive Ubuntu 
-  $!j::
-    Sendplay, {Down}
-  return
-
-  $!k::
-    Sendplay, {Up}
-  return
-
-  $!h::
-    Send, {Left}
-  return
-
-  $!l::
-    Send, {Right}
-  return
-
-
-#IfWinActive
-
-; Jump to start of line
-!Backspace::
-  Send, {Home}
-return
-
-; Jump to end of line
-!Space::
-  Send, {End}
-return
-
-; TODO: Fix these!
-; Jump right/left word wise
-;$^!l::
-;  Sendplay, {Ctrl Down}{Right} 
+;#IfWinNotActive Ubuntu 
+;  $!j::
+;    Sendplay, {Down}
+;  return
+;
+;  $!k::
+;    Sendplay, {Up}
+;  return
+;
+;  $!h::
+;    Send, {Left}
+;  return
+;
+;  $!l::
+;    Send, {Right}
+;  return
+;
+;
+;#IfWinActive
+;
+;; Jump to start of line
+;!Backspace::
+;  Send, {Home}
 ;return
-
-; Highlight right character-wise 
-$!+l::
-  Send, {Shift Down}{Right}
-return
-
-; Highlight right word-wise 
-$^!+l::
-  Send, {Shift Down}{Ctrl Down}{Right}
-return
-
-; Highlight left character-wise 
-$!+h::
-  Send, {Shift Down}{Left}
-return
-
-; Highlight left word-wise 
-$^!+h::
-  Send, {Shift Down}{Ctrl Down}{Left}
-return
-
-; Highlight down character-wise 
-$!+j::
-  Send, {Shift Down}{Down}
-return
-
-; Highlight up character-wise 
-$!+k::
-  Send, {Shift Down}{Up}
-return
-
-; Jump to next line with cursor anywhere
-!Enter::
-  Send, {End}{Enter}
-return
+;
+;; Jump to end of line
+;!Space::
+;  Send, {End}
+;return
+;
+;; TODO: Fix these!
+;; Jump right/left word wise
+;;$^!l::
+;;  Sendplay, {Ctrl Down}{Right} 
+;;return
+;
+;; Highlight right character-wise 
+;$!+l::
+;  Send, {Shift Down}{Right}
+;return
+;
+;; Highlight right word-wise 
+;$^!+l::
+;  Send, {Shift Down}{Ctrl Down}{Right}
+;return
+;
+;; Highlight left character-wise 
+;$!+h::
+;  Send, {Shift Down}{Left}
+;return
+;
+;; Highlight left word-wise 
+;$^!+h::
+;  Send, {Shift Down}{Ctrl Down}{Left}
+;return
+;
+;; Highlight down character-wise 
+;$!+j::
+;  Send, {Shift Down}{Down}
+;return
+;
+;; Highlight up character-wise 
+;$!+k::
+;  Send, {Shift Down}{Up}
+;return
+;
+;; Jump to next line with cursor anywhere
+;!Enter::
+;  Send, {End}{Enter}
+;return
 
 ; -----------------------------------------------------
 
@@ -158,7 +158,10 @@ return
 F4::!F4 ; Alt + F4 - Close window
 F6::!Tab ; Alt + Tab - Switch window
 
-; TODO: Map F7-F9
+; Copy, Cut, & Paste to avoid Dvorak
+F7::^c
+F8::^x
+F9::^v
 
 ; F10 Voice Recognition
 #IfWinActive ahk_exe OUTLOOK.EXE
