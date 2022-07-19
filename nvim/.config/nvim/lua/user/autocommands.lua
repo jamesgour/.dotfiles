@@ -1,4 +1,4 @@
-vim.cmd([[
+vim.cmd [[
 
   " Trigger automatic reload when files change on disk
     autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
@@ -6,6 +6,11 @@ vim.cmd([[
     autocmd FileChangedShellPost *
       \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
+  " Show yank animation
+    augroup highlight_yank
+        autocmd!
+        autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
+    augroup END
 
   " augroup _general_settings
   "   autocmd!
@@ -36,4 +41,4 @@ vim.cmd([[
   "   autocmd!
   "   autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   " augroup end
-]])
+]]
