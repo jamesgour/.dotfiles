@@ -16,6 +16,89 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 ; -------------------- KEY MAPS------------------------ 
+; Window navigation with ALT + 1-0 (or Real Programmer Dvorak equivalents)
+; Make sure to move all windows to the bottom bar in the correct order
+;!1:: ; VPN
+;  Send, #1
+;return 
+;
+;!2:: ; Screen Clipper
+;  Send, #2
+;return 
+;
+;!3:: ; MS Teams
+;  Send, #3
+;return 
+;
+;!4:: ; Outlook
+;  Send, #4
+;return 
+;
+;!5:: ; OneNote
+;  Send, #5
+;return 
+;
+;!6:: ; Windows Terminal
+;  Send, #6
+;return 
+;
+;!7:: ; Work Browser
+;  Send, #7
+;return 
+;
+;!8:: ; Personal Browser
+;  Send, #8
+;return 
+;
+;!9:: ; VS Code 
+;  Send, #9
+;return 
+;
+;!0:: ; Database  
+;  Send, #0
+;return 
+
+; -----------------------------------------------------
+; Xah Lee Workflow Challenge
+F1::
+  Send, {LWin Down}{Left}{LWin Up} ; Move window one monitor left 
+  ; Requires "Move Windows Based on Relative Position" in Fancy Zones
+return
+
+F2::WinMinimize, A ; Minimize active window
+; TODO: Try this out - Used to Remap F11 - Full Screen
+
+F3::
+  Send, {LWin Down}{Right}{LWin Up} ; Move window one monitor right
+  ; Requires "Move Windows Based on Relative Position" in Fancy Zones
+return
+
+F4::!F4 ; Alt + F4 - Close window
+; F5 reserved
+F6::!Tab ; Alt + Tab - Switch window
+
+; Copy, Cut, & Paste to avoid Dvorak pain
+F7::^c
+F8::^x
+F9::^v
+
+; F10 Voice Recognition
+#IfWinActive ahk_exe OUTLOOK.EXE
+  F10::!` ; Activate Outlook dictate
+#IfWinActive
+
+#IfWinActive ahk_exe msedge.exe
+  F10::^+. ; Activate Edge google voice search
+#IfWinActive 
+
+#IfWinActive ahk_exe Explorer.EXE 
+  F10::#^s ; Activate Windows Speech Recognition
+#IfWinActive
+
+F10::#h ; Activate Windows dictate 
+
+F11::Media_Next  
+F12::Media_Play_Pause  
 
 ; -----------------------------------------------------
 ; Vim-like navigation using CTRL + HJKL (Outisde of Ubuntu)
@@ -89,97 +172,3 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;!Enter::
 ;  Send, {End}{Enter}
 ;return
-
-; -----------------------------------------------------
-
-; Easier vimming
-Capslock::Esc
-
-; -----------------------------------------------------
-; Window navigation with CTRL + 1-0
-; Make sure to move all windows to the bottom bar in the correct order
-!1:: ; VPN
-  Send, #1
-return 
-
-!2:: ; Screen Clipper
-  Send, #2
-return 
-
-!3:: ; MS Teams
-  Send, #3
-return 
-
-!4:: ; Outlook
-  Send, #4
-return 
-
-!5:: ; OneNote
-  Send, #5
-return 
-
-!6:: ; Windows Terminal
-  Send, #6
-return 
-
-!7:: ; Work Browser
-  Send, #7
-return 
-
-!8:: ; Personal Browser
-  Send, #8
-return 
-
-!9:: ; VS Code 
-  Send, #9
-return 
-
-!0:: ; Database  
-  Send, #0
-return 
-
-
-; -----------------------------------------------------
-
-; Xah Lee Workflow Challenge
-F1::
-  Send, {LWin Down}{Left}{LWin Up} ; Move window one monitor left 
-  ; Requires "Move Windows Based on Relative Position" in Fancy Zones
-return
-
-F2::WinMinimize, A ; Minimize active window
-; TODO: Try this out - Used to Remap F11 - Full Screen
-
-F3::
-  Send, {LWin Down}{Right}{LWin Up} ; Move window one monitor right
-  ; Requires "Move Windows Based on Relative Position" in Fancy Zones
-return
-
-F4::!F4 ; Alt + F4 - Close window
-F6::!Tab ; Alt + Tab - Switch window
-
-; Copy, Cut, & Paste to avoid Dvorak
-F7::^c
-F8::^x
-F9::^v
-
-; F10 Voice Recognition
-#IfWinActive ahk_exe OUTLOOK.EXE
-  F10::!` ; Activate Outlook dictate
-#IfWinActive
-
-#IfWinActive ahk_exe msedge.exe
-  F10::^+. ; Activate Edge google voice search
-#IfWinActive 
-
-#IfWinActive ahk_exe Explorer.EXE 
-  F10::#^s ; Activate Windows Speech Recognition
-#IfWinActive
-
-F10::#h ; Activate Windows dictate 
-
-F11::Media_Next  
-F12::Media_Play_Pause  
-
-; -----------------------------------------------------
-

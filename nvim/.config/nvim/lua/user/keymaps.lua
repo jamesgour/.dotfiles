@@ -78,6 +78,9 @@ keymap("n", "<leader>p", ":!python3 %<CR>", opts)
 -- Faster :noh
 keymap("n", "<leader>i", ":noh<CR>", opts)
 
+-- Easier Redo
+keymap("n", "<leader>u", ":redo<CR>", opts)
+
 -- Enable Code Review
 keymap("n", "<leader>cr", ":call CodeReview(1)<CR>", opts)
 
