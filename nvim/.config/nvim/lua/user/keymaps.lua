@@ -91,11 +91,11 @@ keymap("n", "<leader>b", ":terminal ~/.dotfiles/bin/tmux-cht.sh<CR>", opts)
 -- Leave insert mode with "ht" instead of ESC
 keymap("i", "ht", "<ESC>", opts)
 
--- Move one space right with Ctrl+l
-keymap("i", "<C-l>", "<Right>", opts)
+-- Move one space right with Alt+l
+keymap("i", "<A-l>", "<Right>", opts)
 
--- Jump to new line from any cursor position with "jj"
---keymap("i", "jj", "<C-o>o", opts)
+-- Jump to new line from any cursor position with "hh"
+keymap("i", "hh", "<C-o>o", opts)
 
 -- Jump to end of line from any cursor position
 --keymap("i", "jl", "<C-o>$", opts)
